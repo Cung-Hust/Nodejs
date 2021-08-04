@@ -1,0 +1,30 @@
+{
+  "name": "f8_codes",
+  "version": "1.0.0",
+  "description": "Example f8 course",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "codes f8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cung-Hust/Nodejs.git"
+  },
+  "keywords": [
+    "codes",
+    "f8"
+  ],
+  "author": "Cungdd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cung-Hust/Nodejs/issues"
+  },
+  "homepage": "https://github.com/Cung-Hust/Nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
