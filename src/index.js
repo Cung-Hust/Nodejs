@@ -6,10 +6,16 @@ const app = express();
 const port = 3000;
 
 // HTTP logger
-app.use(morgan("combined"));
+// app.use(morgan("combined"));
 
 // load img
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use(express.urlencoded({
+  extended: true,
+}))
+app.use(express.json());
+
 
 // Template Engine
 app.engine("hbs", exphbs({
@@ -24,6 +30,15 @@ app.get("/", (req, res) => {
 
 app.get("/news", (req, res) => {
   res.render("news");
+});
+
+app.get("/search", (req, res) => {
+  res.render("search");
+});
+
+app.post("/search", (req, res) => {
+  res.send("");
+  console.log(req.body.search);
 });
 
 app.listen(port, () => {
